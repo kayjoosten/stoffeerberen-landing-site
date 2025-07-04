@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
@@ -144,15 +145,22 @@ export default function Home() {
                   to het aanbrengen van een mooie pvc vloer, wij creëren de basis voor mooi wonen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white">
-                    Gratis Adviesgesprek <ChevronRight className="h-4 w-4" />
+                  <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white"
+                          onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
+                    Gratis Adviesgesprek <ChevronRight className="h-4 w-4"/>
                   </Button>
                 </div>
               </div>
               <div className="relative hidden lg:block">
                 <div className="absolute -right-4 -top-4 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
                 <div className="relative rounded-lg overflow-hidden border shadow-lg h-[400px] bg-muted flex items-center justify-center">
-                  <span className="text-muted-foreground text-lg">Premium vloeren showcase</span>
+                  <Image
+                      src="/visgraatvloer.jpg"
+                      alt="Visgraat PVC vloer"
+                      fill
+                      style={{objectFit: "cover"}}
+                      priority
+                  />
                 </div>
               </div>
             </div>
@@ -282,36 +290,36 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="portfolio" className="py-16 md:py-24 bg-muted/50">
-          <div className="container">
-            <div className="flex flex-col items-center text-center mb-12">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
-                Ons Portfolio
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Prachtige Vloertransformaties
-              </h2>
-              <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                Bekijk onze galerij van voltooide projecten om de kwaliteit van ons werk te zien.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="group relative overflow-hidden rounded-lg h-[250px] bg-muted/80">
-                  <div className="h-full w-full flex items-center justify-center">
-                    <span className="text-muted-foreground">Portfolio project {i}</span>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                    <div className="text-white">
-                      <h3 className="font-bold text-lg">Project {i}</h3>
-                      <p className="text-sm text-white/80">Hardhouten vloer in een modern appartement</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/*<section id="portfolio" className="py-16 md:py-24 bg-muted/50">*/}
+        {/*  <div className="container">*/}
+        {/*    <div className="flex flex-col items-center text-center mb-12">*/}
+        {/*      <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">*/}
+        {/*        Ons Portfolio*/}
+        {/*      </div>*/}
+        {/*      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">*/}
+        {/*        Prachtige Vloertransformaties*/}
+        {/*      </h2>*/}
+        {/*      <p className="max-w-[700px] text-muted-foreground md:text-xl">*/}
+        {/*        Bekijk onze galerij van voltooide projecten om de kwaliteit van ons werk te zien.*/}
+        {/*      </p>*/}
+        {/*    </div>*/}
+        {/*    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">*/}
+        {/*      {[1, 2, 3, 4, 5, 6].map((i) => (*/}
+        {/*        <div key={i} className="group relative overflow-hidden rounded-lg h-[250px] bg-muted/80">*/}
+        {/*          <div className="h-full w-full flex items-center justify-center">*/}
+        {/*            <span className="text-muted-foreground">Portfolio project {i}</span>*/}
+        {/*          </div>*/}
+        {/*          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">*/}
+        {/*            <div className="text-white">*/}
+        {/*              <h3 className="font-bold text-lg">Project {i}</h3>*/}
+        {/*              <p className="text-sm text-white/80">Hardhouten vloer in een modern appartement</p>*/}
+        {/*            </div>*/}
+        {/*          </div>*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
 
         <section id="contact" className="py-16 md:py-24 bg-primary/5">
           <div className="container">
@@ -427,7 +435,7 @@ export default function Home() {
 
         <section className="py-12 md:py-16 bg-blue-600 text-white">
           <div className="container">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <div className="relative h-8 w-8 bg-primary-foreground/20 flex items-center justify-center text-primary-foreground font-bold">
@@ -472,56 +480,11 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-bold mb-4">Bedrijf</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Over Ons
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Ons Team
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Vacatures
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Pers
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
                 <h3 className="text-lg font-bold mb-4">Juridisch</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/voorwaarden" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Algemene Voorwaarden
-                    </a>
-                  </li>
-                  <li>
                     <a href="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground">
                       Privacybeleid
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/cookies" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Cookiebeleid
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/garantie" className="text-primary-foreground/80 hover:text-primary-foreground">
-                      Garantie-informatie
                     </a>
                   </li>
                 </ul>
