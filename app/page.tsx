@@ -15,6 +15,7 @@ import {
   Shield,
   PenToolIcon as Tool,
 } from "lucide-react"
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   // Voeg state toe voor mobiel menu
@@ -24,107 +25,38 @@ export default function Home() {
         {
           title: "PVC Vloeren",
           description: "Professionele PVC vloeren installatie voor alle ruimtes in huis, in allerlei patronen. Onderandere visgraat en hongaars punt",
-          color: "bg-red-50",
+          color: "bg-accent/60",
         },
         {
           title: "Tapijt Vloeren",
           description: "We brengen alle soorten tapijt aan van laagpolig tot hoogpolig tapijt, voor alle ruimtes in huis of op kantoor ",
-          color: "bg-stone-100",
+          color: "bg-secondary",
         },
         {
           title: "Professionele demontage van vloeren",
           description: "Wij demonteren de vloer en brengen deze naar een recyclingcentrum",
-          color: "bg-slate-100",
+          color: "bg-muted",
         },
         {
           title: "Vloer Reparatie",
           description:
             "Professionele reparatiediensten voor beschadigde vloeren, van kleine reparaties tot grote restauraties.",
-          color: "bg-orange-100",
+          color: "bg-accent/40",
         },
         {
           title: "Vloer Egalisatie",
           description: "Deskundige vloer egalisatie om een perfecte basis en ondergrond voor uw nieuwe vloer te garanderen.",
-          color: "bg-gray-100",
+          color: "bg-secondary/80",
         },
         {
           title: "Trap Bekleding",
           description: "Geluidsdempend en duurzaam materiaal, van onder andere PVC en tapijt",
-          color: "bg-stone-100",
+          color: "bg-accent/50",
         },
       ]
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 border-b bg-blue-600 backdrop-blur supports-[backdrop-filter]:bg-blue-600/60">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-3 text-white">
-            <Logo size={70} priority />
-            <span className="text-xl font-bold">Stoffeerberen</span>
-          </div>
-          <nav
-            className={`${mobileMenuOpen ? "flex" : "hidden"} md:flex absolute md:relative top-16 md:top-0 left-0 right-0 flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 bg-background md:bg-transparent p-4 md:p-0 border-b md:border-0 z-50`}
-          >
-            <Link
-              href="#services"
-              className="text-sm font-medium text-white hover:text-blue-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Diensten
-            </Link>
-            <Link
-              href="#process"
-              className="text-sm font-medium text-white hover:text-blue-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Ons Proces
-            </Link>
-            <Link
-              href="#portfolio"
-              className="text-sm font-medium text-white hover:text-blue-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="#contact"
-              className="text-sm font-medium text-white hover:text-blue-100"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="#contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">Offerte Aanvragen</Button>
-            </Link>
-            <Button
-              variant="outline"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Menu openen</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </header>
       <main className="flex-1">
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -145,7 +77,7 @@ export default function Home() {
                   to het aanbrengen van een mooie pvc vloer, wij creëren de basis voor mooi wonen.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white"
+                  <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
                           onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
                     Gratis Adviesgesprek <ChevronRight className="h-4 w-4"/>
                   </Button>
@@ -354,9 +286,9 @@ export default function Home() {
                       <div className="text-sm text-muted-foreground">Reactie binnen 24 uur</div>
                     </div>
                   </div>
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h3 className="font-semibold text-blue-900 mb-2">Gratis Adviesgesprek</h3>
-                    <p className="text-blue-700 text-sm leading-relaxed">
+                  <div className="bg-accent/30 border border-accent rounded-lg p-6">
+                    <h3 className="font-semibold text-accent-foreground mb-2">Gratis Adviesgesprek</h3>
+                    <p className="text-foreground text-sm leading-relaxed">
                       Wij komen graag bij u langs voor een gratis adviesgesprek en opmeting. 
                       Geen verplichtingen, wel deskundig advies op maat.
                     </p>
@@ -370,12 +302,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 md:py-16 bg-blue-600 text-white">
+        <section className="py-12 md:py-16 bg-primary text-primary-foreground">
           <div className="container">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Logo size={60} className=" flex items-center brightness-0 invert" />
+                <div className="flex items-center gap-3 ">
+                  <Logo size={60} className="flex items-center" />
                   <span className="text-xl font-bold">Stoffeerberen</span>
                 </div>
                 <p className="text-primary-foreground/80">

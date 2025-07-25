@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
+import Header from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body className={inter.className}>
-        {children}
+      <Header/>
+      {children}
         <Toaster 
           position="top-right"
           richColors

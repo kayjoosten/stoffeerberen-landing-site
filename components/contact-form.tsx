@@ -97,12 +97,12 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
+    <div className="bg-card rounded-lg shadow-lg p-6 md:p-8">
       <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <h3 className="text-2xl font-bold text-card-foreground mb-2">
           Vraag een vrijblijvende offerte aan
         </h3>
-        <p className="text-gray-600">
+        <p className="text-muted-foreground">
           Vul het formulier in en wij nemen binnen 24 uur contact met u op voor een persoonlijk adviesgesprek.
         </p>
       </div>
@@ -111,7 +111,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Name Field */}
           <div className="space-y-2">
-            <Label htmlFor="name" className="text-sm font-medium text-gray-700">
+            <Label htmlFor="name" className="text-sm font-medium text-foreground">
               <User className="w-4 h-4 inline mr-2" />
               Volledige naam *
             </Label>
@@ -122,14 +122,14 @@ const ContactForm = () => {
               {...register("name")}
               className={`transition-colors ${
                 errors.name 
-                  ? "border-red-500 focus:border-red-500 focus:ring-red-500" 
-                  : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                  ? "border-destructive focus:border-destructive focus:ring-destructive" 
+                  : "border-input focus:border-primary focus:ring-primary"
               }`}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
             />
             {errors.name && (
-              <p id="name-error" className="text-sm text-red-600" role="alert">
+              <p id="name-error" className="text-sm text-destructive" role="alert">
                 {errors.name.message}
               </p>
             )}
@@ -137,7 +137,7 @@ const ContactForm = () => {
 
           {/* Email Field */}
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+            <Label htmlFor="email" className="text-sm font-medium text-foreground">
               <Mail className="w-4 h-4 inline mr-2" />
               E-mailadres *
             </Label>
@@ -148,14 +148,14 @@ const ContactForm = () => {
               {...register("email")}
               className={`transition-colors ${
                 errors.email 
-                  ? "border-red-500 focus:border-red-500 focus:ring-red-500" 
-                  : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                  ? "border-destructive focus:border-destructive focus:ring-destructive" 
+                  : "border-input focus:border-primary focus:ring-primary"
               }`}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
             />
             {errors.email && (
-              <p id="email-error" className="text-sm text-red-600" role="alert">
+              <p id="email-error" className="text-sm text-destructive" role="alert">
                 {errors.email.message}
               </p>
             )}
@@ -165,7 +165,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Phone Field */}
           <div className="space-y-2">
-            <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
+            <Label htmlFor="phone" className="text-sm font-medium text-foreground">
               <Phone className="w-4 h-4 inline mr-2" />
               Telefoonnummer *
             </Label>
@@ -176,14 +176,14 @@ const ContactForm = () => {
               {...register("phone")}
               className={`transition-colors ${
                 errors.phone 
-                  ? "border-red-500 focus:border-red-500 focus:ring-red-500" 
-                  : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                  ? "border-destructive focus:border-destructive focus:ring-destructive" 
+                  : "border-input focus:border-primary focus:ring-primary"
               }`}
               aria-invalid={!!errors.phone}
               aria-describedby={errors.phone ? "phone-error" : undefined}
             />
             {errors.phone && (
-              <p id="phone-error" className="text-sm text-red-600" role="alert">
+              <p id="phone-error" className="text-sm text-destructive" role="alert">
                 {errors.phone.message}
               </p>
             )}
@@ -191,7 +191,7 @@ const ContactForm = () => {
 
           {/* Service Field */}
           <div className="space-y-2">
-            <Label htmlFor="service" className="text-sm font-medium text-gray-700">
+            <Label htmlFor="service" className="text-sm font-medium text-foreground">
               Gewenste dienst *
             </Label>
             <Select
@@ -201,8 +201,8 @@ const ContactForm = () => {
               <SelectTrigger 
                 className={`transition-colors ${
                   errors.service 
-                    ? "border-red-500 focus:border-red-500 focus:ring-red-500" 
-                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                    ? "border-destructive focus:border-destructive focus:ring-destructive" 
+                    : "border-input focus:border-primary focus:ring-primary"
                 }`}
                 aria-invalid={!!errors.service}
                 aria-describedby={errors.service ? "service-error" : undefined}
@@ -218,7 +218,7 @@ const ContactForm = () => {
               </SelectContent>
             </Select>
             {errors.service && (
-              <p id="service-error" className="text-sm text-red-600" role="alert">
+              <p id="service-error" className="text-sm text-destructive" role="alert">
                 {errors.service.message}
               </p>
             )}
@@ -227,7 +227,7 @@ const ContactForm = () => {
 
         {/* Message Field */}
         <div className="space-y-2">
-          <Label htmlFor="message" className="text-sm font-medium text-gray-700">
+          <Label htmlFor="message" className="text-sm font-medium text-foreground">
             Uw bericht *
           </Label>
           <Textarea
@@ -237,14 +237,14 @@ const ContactForm = () => {
             {...register("message")}
             className={`transition-colors resize-none ${
               errors.message 
-                ? "border-red-500 focus:border-red-500 focus:ring-red-500" 
-                : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                ? "border-destructive focus:border-destructive focus:ring-destructive" 
+                : "border-input focus:border-primary focus:ring-primary"
             }`}
             aria-invalid={!!errors.message}
             aria-describedby={errors.message ? "message-error" : undefined}
           />
           {errors.message && (
-            <p id="message-error" className="text-sm text-red-600" role="alert">
+            <p id="message-error" className="text-sm text-destructive" role="alert">
               {errors.message.message}
             </p>
           )}
@@ -255,7 +255,7 @@ const ContactForm = () => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
           >
             {isSubmitting ? (
               <>
@@ -272,14 +272,14 @@ const ContactForm = () => {
         </div>
 
         {/* Privacy Notice */}
-        <div className="text-xs text-gray-500 leading-relaxed">
+        <div className="text-xs text-muted-foreground leading-relaxed">
           <p>
             Door dit formulier te versturen, gaat u akkoord met het verwerken van uw gegevens voor het 
             beantwoorden van uw aanvraag. Uw gegevens worden niet gedeeld met derden en worden 
             verwijderd na afhandeling van uw aanvraag. Meer informatie vindt u in onze{" "}
             <a 
               href="/privacy" 
-              className="text-blue-600 hover:text-blue-700 underline"
+              className="text-primary hover:text-primary/80 underline"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -4,7 +4,6 @@ import Footer from "@/components/layout/Footer";
 export default function Privacy() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
       <main className="flex-1">
         <div className="container mx-auto py-12 px-4 max-w-4xl">
           <h1 className="text-3xl font-bold mb-6">Privacyverklaring</h1>
@@ -71,7 +70,7 @@ export default function Privacy() {
               U kunt zich afmelden voor cookies door uw internetbrowser zo in te stellen dat deze geen cookies meer opslaat. Daarnaast kunt u ook alle informatie die eerder is opgeslagen via de instellingen van uw browser verwijderen.
           </p>
           <p className="mb-4">
-              Zie voor een toelichting: <a href="https://veiliginternetten.nl/cookies-wat-zijn-het-en-wat-doe-ik-ermee/" className="text-blue-600 hover:underline">https://veiliginternetten.nl/cookies-wat-zijn-het-en-wat-doe-ik-ermee/</a>
+              Zie voor een toelichting: <a href="https://veiliginternetten.nl/cookies-wat-zijn-het-en-wat-doe-ik-ermee/" className="text-primary hover:underline">https://veiliginternetten.nl/cookies-wat-zijn-het-en-wat-doe-ik-ermee/</a>
           </p>
 
           <h2 className="text-xl font-semibold mt-6 mb-3">Gegevens inzien, aanpassen of verwijderen</h2>
@@ -79,18 +78,18 @@ export default function Privacy() {
               U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of te verwijderen. Dit kunt u zelf doen via de persoonlijke instellingen van uw account. Daarnaast heeft u het recht om uw eventuele toestemming voor de gegevensverwerking in te trekken of bezwaar te maken tegen de verwerking van uw persoonsgegevens door ons bedrijf en heeft u het recht op gegevensoverdraagbaarheid. Dat betekent dat u bij ons een verzoek kunt indienen om de persoonsgegevens die wij van u beschikken in een computerbestand naar u of een ander, door u genoemde organisatie, te sturen.
           </p>
           <p className="mb-4">
-              Wilt u gebruik maken van uw recht op bezwaar en/of recht op gegevensoverdraagbaarheid of heeft u andere vragen/opmerkingen over de gegevensverwerking, stuur dan een gespecificeerd verzoek naar <a href="mailto:info@stoffeerberen.nl" className="text-blue-600 hover:underline">info@stoffeerberen.nl</a>.
+              Wilt u gebruik maken van uw recht op bezwaar en/of recht op gegevensoverdraagbaarheid of heeft u andere vragen/opmerkingen over de gegevensverwerking, stuur dan een gespecificeerd verzoek naar <a href="mailto:info@stoffeerberen.nl" className="text-primary hover:underline">info@stoffeerberen.nl</a>.
           </p>
           <p className="mb-4">
               Om er zeker van te zijn dat het verzoek tot inzage door u is gedaan, vragen wij u een kopie van uw identiteitsbewijs bij het verzoek mee te sturen. Maak in deze kopie uw pasfoto, MRZ (machine readable zone, de strook met nummers onderaan het paspoort), paspoortnummer en Burgerservicenummer (BSN) zwart. Dit ter bescherming van uw privacy. Stoffeerberen zal zo snel mogelijk, maar in ieder geval binnen vier weken, op uw verzoek reageren.
           </p>
           <p className="mb-4">
-              Stoffeerberen wil u er tevens op wijzen dat u de mogelijkheid hebt om een klacht in te dienen bij de nationale toezichthouder, de Autoriteit Persoonsgegevens. Dat kan via de volgende link: <a href="https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons" className="text-blue-600 hover:underline">https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons</a>
+              Stoffeerberen wil u er tevens op wijzen dat u de mogelijkheid hebt om een klacht in te dienen bij de nationale toezichthouder, de Autoriteit Persoonsgegevens. Dat kan via de volgende link: <a href="https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons" className="text-primary hover:underline">https://autoriteitpersoonsgegevens.nl/nl/contact-met-de-autoriteit-persoonsgegevens/tip-ons</a>
           </p>
 
           <h2 className="text-xl font-semibold mt-6 mb-3">Hoe wij persoonsgegevens beveiligen</h2>
           <p className="mb-4">
-              Stoffeerberen neemt de bescherming van uw gegevens serieus en neemt passende maatregelen om misbruik, verlies, onbevoegde toegang, ongewenste openbaarmaking en ongeoorloofde wijziging tegen te gaan. Als u de indruk heeft dat uw gegevens niet goed beveiligd zijn of er aanwijzingen zijn van misbruik, neem dan contact op met onze klantenservice of via <a href="mailto:info@stoffeerberen.nl" className="text-blue-600 hover:underline">info@stoffeerberen.nl</a>
+              Stoffeerberen neemt de bescherming van uw gegevens serieus en neemt passende maatregelen om misbruik, verlies, onbevoegde toegang, ongewenste openbaarmaking en ongeoorloofde wijziging tegen te gaan. Als u de indruk heeft dat uw gegevens niet goed beveiligd zijn of er aanwijzingen zijn van misbruik, neem dan contact op met onze klantenservice of via <a href="mailto:info@stoffeerberen.nl" className="text-primary hover:underline">info@stoffeerberen.nl</a>
           </p>
         </div>
       </main>

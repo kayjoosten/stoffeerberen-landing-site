@@ -12,7 +12,7 @@ const services = [
 export default function Footer() {
   return (
     <>
-      <section className="py-12 md:py-16 bg-blue-600 text-white">
+      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-4">
@@ -125,4 +125,4 @@ export default function Footer() {
       </footer>
     </>
   );
-} 
+}
