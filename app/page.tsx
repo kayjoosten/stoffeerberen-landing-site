@@ -4,6 +4,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import ContactForm from "@/components/contact-form"
+import { Logo } from "@/components/logo"
 import {
   CheckCircle,
   ChevronRight,
@@ -56,10 +58,8 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 border-b bg-blue-600 backdrop-blur supports-[backdrop-filter]:bg-blue-600/60">
         <div className="container flex h-16 items-center justify-between py-4">
-          <div className="flex items-center gap-2 text-white">
-            <div className="relative h-8 w-8 bg-white/20 flex items-center justify-center text-white font-bold">
-              S
-            </div>
+          <div className="flex items-center gap-3 text-white">
+            <Logo size={70} priority />
             <span className="text-xl font-bold">Stoffeerberen</span>
           </div>
           <nav
@@ -321,9 +321,9 @@ export default function Home() {
         {/*  </div>*/}
         {/*</section>*/}
 
-        <section id="contact" className="py-16 md:py-24 bg-primary/5">
+        <section id="contact" className="py-16 md:py-24 bg-slate-50">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">Contact</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
@@ -333,101 +333,38 @@ export default function Home() {
                   Neem contact op met ons team voor een gratis adviesgesprek en offerte. Wij helpen u graag bij het
                   creëren van het perfecte beeld voor uw ruimte.
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <Phone className="h-5 w-5" />
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <Phone className="h-6 w-6" />
                     </div>
                     <div>
-                      <div className="text-sm text-muted-foreground">Bel ons op</div>
-                      <div className="font-medium">+31 6 2247 5904</div>
+                      <div className="text-sm text-muted-foreground">Bel ons direct</div>
+                      <div className="font-semibold text-lg">+31 6 2247 5904</div>
+                      <div className="text-sm text-muted-foreground">Ma-Vr: 8:00-18:00</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <MessageSquare className="h-5 w-5" />
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <MessageSquare className="h-6 w-6" />
                     </div>
                     <div>
-                      <div className="text-sm text-muted-foreground">E-mail ons op</div>
-                      <div className="font-medium">info@stoffeerberen.nl</div>
+                      <div className="text-sm text-muted-foreground">E-mail ons</div>
+                      <div className="font-semibold text-lg">info@stoffeerberen.nl</div>
+                      <div className="text-sm text-muted-foreground">Reactie binnen 24 uur</div>
                     </div>
+                  </div>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h3 className="font-semibold text-blue-900 mb-2">Gratis Adviesgesprek</h3>
+                    <p className="text-blue-700 text-sm leading-relaxed">
+                      Wij komen graag bij u langs voor een gratis adviesgesprek en opmeting. 
+                      Geen verplichtingen, wel deskundig advies op maat.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="bg-background rounded-lg border p-6 shadow-sm">
-                <h3 className="text-xl font-bold mb-4">Vraag een Gratis Offerte Aan</h3>
-                <form className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="first-name" className="text-sm font-medium">
-                        Voornaam
-                      </label>
-                      <input
-                        id="first-name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Jan"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="last-name" className="text-sm font-medium">
-                        Achternaam
-                      </label>
-                      <input
-                        id="last-name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="de Vries"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      E-mail
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="jan.devries@voorbeeld.nl"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium">
-                      Telefoon
-                    </label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="06 1234 5678"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="service" className="text-sm font-medium">
-                      Dienst waarin u geïnteresseerd bent
-                    </label>
-                    <select
-                      id="service"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    >
-                      {services.map((service, i) => (
-                        <option key={i} value={service.title}>{service.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium">
-                      Bericht
-                    </label>
-                    <textarea
-                      id="message"
-                      className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Vertel ons over uw project..."
-                    />
-                  </div>
-                  <Button className="w-full" size="lg">
-                    Verstuur Aanvraag
-                  </Button>
-                </form>
+              <div>
+                <ContactForm />
               </div>
             </div>
           </div>
@@ -437,10 +374,8 @@ export default function Home() {
           <div className="container">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <div className="relative h-8 w-8 bg-primary-foreground/20 flex items-center justify-center text-primary-foreground font-bold">
-                    S
-                  </div>
+                <div className="flex items-center gap-3">
+                  <Logo size={60} className=" flex items-center brightness-0 invert" />
                   <span className="text-xl font-bold">Stoffeerberen</span>
                 </div>
                 <p className="text-primary-foreground/80">
@@ -503,4 +438,3 @@ export default function Home() {
     </div>
   )
 }
-

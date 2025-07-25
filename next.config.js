@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Dit zorgt voor static export
+  // Remove static export to enable API routes
+  // output: 'export',  // Commented out to allow API routes
   images: {
-    unoptimized: true, // Nodig voor static export
+    unoptimized: true, // Keep for consistency
+  },
+  // Ensure API routes are handled properly
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      },
+    ]
   },
 }
 
