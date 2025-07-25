@@ -21,37 +21,39 @@ export default function Header() {
           >
             <Link
                 href="#services"
-                className="text-sm font-medium text-primary-foreground hover:text-primary-foreground/80"
+                className={`${mobileMenuOpen ? "text-black" : "text-primary-foreground hover:text-primary-foreground/80"} text-sm font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
             >
               Diensten
             </Link>
             <Link
                 href="#process"
-                className="text-sm font-medium text-primary-foreground hover:text-primary-foreground/80"
+                className={`${mobileMenuOpen ? "text-black" : "text-primary-foreground hover:text-primary-foreground/80"} text-sm font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
             >
               Ons Proces
             </Link>
             <Link
                 href="#portfolio"
-                className="text-sm font-medium text-primary-foreground hover:text-primary-foreground/80"
+                className={`${mobileMenuOpen ? "text-black" : "text-primary-foreground hover:text-primary-foreground/80"} text-sm font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
             >
               Portfolio
             </Link>
             <Link
                 href="#contact"
-                className="text-sm font-medium text-primary-foreground hover:text-primary-foreground/80"
+                className={`${mobileMenuOpen ? "text-black" : "text-primary-foreground hover:text-primary-foreground/80"} text-sm font-medium`}
                 onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </Link>
+            <div className="flex items-center gap-4">
+              <Link href="#contact">
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">Offerte Aanvragen</Button>
+              </Link>
+            </div>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#contact">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">Offerte Aanvragen</Button>
-            </Link>
             <Button
                 variant="outline"
                 size="icon"

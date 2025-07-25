@@ -26,16 +26,19 @@ export default function Home() {
           title: "PVC Vloeren",
           description: "Professionele PVC vloeren installatie voor alle ruimtes in huis, in allerlei patronen. Onderandere visgraat en hongaars punt",
           color: "bg-accent/60",
+          image: "/visgraatvloer.jpg",
         },
         {
           title: "Tapijt Vloeren",
           description: "We brengen alle soorten tapijt aan van laagpolig tot hoogpolig tapijt, voor alle ruimtes in huis of op kantoor ",
           color: "bg-secondary",
+          image: "/tapijt.jpeg",
         },
         {
           title: "Professionele demontage van vloeren",
           description: "Wij demonteren de vloer en brengen deze naar een recyclingcentrum",
           color: "bg-muted",
+          image: "/demontage.jpeg",
         },
         {
           title: "Vloer Reparatie",
@@ -47,6 +50,8 @@ export default function Home() {
           title: "Vloer Egalisatie",
           description: "Deskundige vloer egalisatie om een perfecte basis en ondergrond voor uw nieuwe vloer te garanderen.",
           color: "bg-secondary/80",
+          image: "/egalisatie-vloer.jpg",
+
         },
         {
           title: "Trap Bekleding",
@@ -136,8 +141,19 @@ export default function Home() {
                   key={i}
                   className="group relative overflow-hidden rounded-lg border bg-background shadow-sm transition-all hover:shadow-md"
                 >
-                  <div className={`aspect-video overflow-hidden ${service.color} flex items-center justify-center`}>
-                    <span className="text-lg font-medium">{service.title}</span>
+                  <div className={`flex aspect-video overflow-hidden ${service.color} block items-end justify-end`}>
+                    {/*<span className="text-lg font-medium">{service.title}</span>*/}
+                    {service.image && (
+                        <Image
+                            src={service.image}
+                            alt={service.title}
+                            width="700"
+                            height="700"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            style={{ objectFit: "contain", position: "relative" }}
+                            className="transition-transform duration-500 group-hover:scale-110 inset-0"
+                        />
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold">{service.title}</h3>
