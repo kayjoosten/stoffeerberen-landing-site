@@ -45,6 +45,7 @@ export default function Home() {
           description:
             "Professionele reparatiediensten voor beschadigde vloeren, van kleine reparaties tot grote restauraties.",
           color: "bg-accent/40",
+          image: "/vloer-reparatie.jpg",
         },
         {
           title: "Vloer Egalisatie",
@@ -57,6 +58,7 @@ export default function Home() {
           title: "Trap Bekleding",
           description: "Geluidsdempend en duurzaam materiaal, van onder andere PVC en tapijt",
           color: "bg-accent/50",
+          image: "/trap-bekleding.png",
         },
       ]
 
